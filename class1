@@ -1,0 +1,199 @@
+----------switch case------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+char ch;
+ch=(char)br.read();
+switch(ch)
+{
+case 'A':
+case 'E':
+case 'I':
+case 'O':
+case 'U':
+case 'a':
+case 'e':
+case 'i':
+case 'o':
+case 'u':
+	System.out.println("vowel");
+	break;
+default:
+	System.out.println("consonant");
+	break;
+}
+}
+}
+output:1                output2:
+a                       b
+vowel                   consonant
+-----------------------------------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+char ch;
+ch=(char)br.read();
+switch(ch)
+{
+case 'y':
+	System.out.println("yellow");
+	break;
+case 'r':
+	System.out.println("red");
+	break;
+case 'g':
+	System.out.println("green");
+	break;
+case 'b':
+	System.out.println("blue or black");
+	break;
+case 'v':
+	System.out.println("violet");
+	break;
+case 'o':
+	System.out.println("orange");
+	break;
+case 'i':
+	System.out.println("indigo");
+	break;
+case 'p':
+	System.out.println("purple or pink");
+	break;
+case 'w':
+	System.out.println("white");
+	break;
+default:
+	System.out.println("no colour");
+	break;
+}
+}
+}
+------------------product of factors-sum of factors---------------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int prod=1,sum=0,n,i;
+n=Integer.parseInt(br.readLine());
+for(i=1;i<=n;i++)
+{
+if(n%i==0)
+{
+prod=prod*i;
+sum=sum+i;
+}
+}
+System.out.println("difference="+(prod-sum));
+}
+}
+output:
+6
+difference=24
+---------------------fibonacci--------------------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int a=0,b=1,c,n,i;
+n=Integer.parseInt(br.readLine());
+System.out.print(a+" "+b+" ");
+for(i=3;i<=n;i++)
+{
+c=a+b;
+System.out.print(c+" ");
+a=b;
+b=c;
+}
+}
+}
+output:
+11
+0 1 1 2 3 5 8 13 21 34 55
+------------------with in range-----------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int a=0,b=1,c,n,sum=0;
+n=Integer.parseInt(br.readLine());
+System.out.print(a+" "+b+" ");
+c=a+b;
+while(c<=n)
+{
+System.out.print(c+" ");
+c=a+b;
+a=b;
+b=c;
+}
+}
+}
+output:
+11
+0 1 1 2 3 5 8
+----------------amstrong number----------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,count,sum=0,r,temp;
+n=Integer.parseInt(br.readLine());
+count=(int)Math.log10(n)+1;
+temp=n;
+while(n>0)
+{
+r=n%10;
+sum=sum+(int)Math.pow(r,count);
+n=n/10;
+}
+if(sum==temp)
+System.out.println(temp+" is a amstrong number");
+else
+System.out.println(temp+" is not an amstrong number");
+}
+}
+output:
+153
+153 is a amstrong number
+output:
+222
+22 is not an amstrong number
+------------------palimdrome-------------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,sum=0,r,temp;
+n=Integer.parseInt(br.readLine());
+temp=n;
+while(n>0)
+{
+r=n%10;
+sum=sum*10+r;
+n=n/10;
+}
+if(sum==temp)
+System.out.println(temp+"is a palindrome");
+else
+System.out.println(temp+"is not an palindrome");
+}
+}
+output:
+101
+101is a palindrome
+-------------------------------
