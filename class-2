@@ -1,0 +1,80 @@
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader(isr);
+int n,sum=0,r,temp,d;
+n=Integer.parseInt(br.readLine());
+temp=n;
+d=(int)Math.log10(n)+1;
+while(n>0)
+{
+r=n%10;
+sum=sum+(int)Math.pow(r,d);
+n=n/10;
+d--;
+}
+if(sum==temp)
+System.out.println(temp+"is a disarium Number");
+else
+System.out.println(temp+"is not a disarium Number ");
+}
+}
+output:
+175
+175is a disarium Number
+--------------------functions-----------
+import java.io.*;
+public class basic{
+public static void show()//without creating an object
+{
+System.out.println("show");
+}
+public void display()//must create an object
+{
+System.out.println("disply");
+}
+public static void main(String args[])
+{
+basic obj=new basic();
+obj.display();
+show();
+System.out.println("welcome");
+}
+}
+output:
+disply
+show
+welcome
+-------------------strings----------------------------------
+1)String s=new String();//empty string
+2)String s= new String(String literal)
+3)String s=new String(stringBuffer sb)
+4)String s=new string(ch[],sb)
+----------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+String input;
+int sum=0;
+input=br.readLine();
+String num[]=input.split(" ");
+for(int i=0;i<num.length;i++)
+{
+sum=sum+Integer.parseInt(num[i]);
+System.out.println(num[i]);
+}
+System.out.println(sum);
+}
+}
+output:
+10
+20
+30
+40
+50
+150
+---------------------
