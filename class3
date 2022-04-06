@@ -1,0 +1,205 @@
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+int x[],n,i,j;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the size of an array");
+n=Integer.parseInt(br.readLine());
+x=new int[n];
+System.out.println("enter the "+n+" elements");
+for(i=0;i<n;i++)
+{
+x[i]=Integer.parseInt(br.readLine());
+}
+System.out.println("elements in the array are:");
+for(int ele:x)
+System.out.println(ele);
+System.out.println("enter the index=");
+j=Integer.parseInt(br.readLine());
+System.out.println("element in"+j+"index is="+x[j]);
+}
+}
+output:
+enter the size of an array
+5
+enter the 5 elements
+10
+20
+30
+40
+50
+elements in the array are:
+10
+20
+30
+40
+50
+enter the index=
+3
+element in3index is=40
+------------------even and odd in an array------------------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+int x[],n,i;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the size of an array");
+n=Integer.parseInt(br.readLine());
+x=new int[n];
+System.out.println("enter the "+n+" elements");
+for(i=0;i<n;i++)
+{
+x[i]=Integer.parseInt(br.readLine());
+}
+System.out.println("even elements in the array are:");
+for(int ele:x){
+if(ele%2==0)
+System.out.println(ele);
+}
+System.out.println("odd elements in the array are:");
+for(int ele:x){
+if(ele%2!=0)
+System.out.println(ele);
+}
+}
+}
+output:
+enter the size of an array
+5
+enter the 5 elements
+1
+2
+3
+4
+5
+even elements in the array are:
+2
+4
+odd elements in the array are:
+1
+3
+5
+-----------or----------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+int x[],e[],q[],n,i,j=0,k=0;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the size of an array");
+n=Integer.parseInt(br.readLine());
+x=new int[n];
+e=new int[n];
+q=new int[n];
+System.out.println("enter the "+n+" elements");
+for(i=0;i<n;i++){
+x[i]=Integer.parseInt(br.readLine());
+}
+for(int ele:x)
+{
+if(ele%2==0)
+e[j++]=ele;
+else
+q[k++]=ele;
+}
+System.out.println("even numbers are: ");
+for(i=0;i<j;i++)
+System.out.print(e[i]+" ");
+System.out.println("\nodd numbers are: ");
+for(i=0;i<k;i++)
+System.out.print(q[i]+" ");
+
+}
+}
+output:
+enter the size of an array
+5
+enter the 5 elements
+1
+2
+3
+4
+5
+even numbers are:
+2 4
+odd numbers are:
+1 3 5
+--------------min and max sal of employee--------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+int sal[],n,i,min,max;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the number of employees:");
+n=Integer.parseInt(br.readLine());
+sal=new int[n];
+System.out.println("enter the "+n+" employee salaries:");
+for(i=0;i<n;i++){
+sal[i]=Integer.parseInt(br.readLine());
+}
+min=sal[0];
+max=sal[0];
+for(int ele:sal)
+{
+if(min>ele)
+min=ele;
+if(max<ele)
+max=ele;
+}
+System.out.println("min sal="+min);
+System.out.print("max sal="+max);
+}
+}
+output:
+enter the number of employees:
+3
+enter the 3 employee salaries:
+100000
+21000
+315000
+min sal=21000
+max sal=315000
+---------------------
+import java.io.*;
+public class basic{
+public static void main(String args[])throws Exception
+{
+int sal[],n,i,j,count=0;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("enter the number of employees:");
+n=Integer.parseInt(br.readLine());
+sal=new int[n];
+System.out.println("enter the "+n+" employee salaries:");
+for(i=0;i<n;i++){
+sal[i]=Integer.parseInt(br.readLine());
+}
+for(i=0;i<n;i++){
+if(sal[i]!=-1){
+count=0;
+for(j=i+1;j<n;j++){
+if(sal[i]==sal[j])
+{
+sal[j]=-1;
+count++;
+}
+}
+}
+if(count==0)
+System.out.println("unique sal="+sal[i]);
+}
+}
+}
+output:
+enter the number of employees:
+5
+enter the 5 employee salaries:
+100
+200
+100
+200
+300
+unique sal=300
+--------------------------------------------------------
