@@ -1,0 +1,111 @@
+-----------------using class member functions-----------------------------
+import java.io.*;
+class Box
+{
+int l,b,h;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+public void getinput()throws Exception
+{
+l=Integer.parseInt(br.readLine());
+b=Integer.parseInt(br.readLine());
+h=Integer.parseInt(br.readLine());
+}
+public int cal_Area()
+{
+return l*b;
+}
+public int cal_volume()
+{
+return l*b*h;
+}
+public static void main(String args[]) throws Exception
+{
+Box b1=new Box();
+b1.getinput();
+int area=b1.cal_Area();
+int volume=b1.cal_volume();
+System.out.println("area="+area+"\nvolume="+volume);
+}
+}
+-----------------------------------------------
+import java.io.*;
+class employee
+{
+int empid,sal;
+String empname,depname,org,ug,pg;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+public void getPersonal()throws Exception
+{
+System.out.println("Enter Empname,id,department,salary,organisation ");
+empname=br.readLine();
+empid=Integer.parseInt(br.readLine());
+depname=br.readLine();
+sal=Integer.parseInt(br.readLine());
+org=br.readLine();
+}
+public void getQualification()throws Exception
+{
+System.out.println("Enter ug and pg ");
+ug=br.readLine();
+pg=br.readLine();
+}
+public void displayPersonal()
+{
+System.out.println("Empid= "+empid);
+System.out.println("Empname= "+empname);
+System.out.println("Department Name= "+depname);
+System.out.println("Salary= "+sal);
+System.out.println("Organisation name= "+org);
+}
+public void displayQualification()
+{
+System.out.println("UG= "+ug);
+System.out.println("PG= "+pg);
+}
+public static void main(String args[])throws Exception
+{
+employee e=new employee();
+e.getPersonal();
+e.getQualification();
+e.displayPersonal();
+e.displayQualification();
+}
+}
+
+------------------------------------------------
+import java.io.*;
+class student
+{
+String rollno,name,branch,collegename;
+int year;
+float per;
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+public void getdata()throws Exception
+{
+System.out.println("enter the rollno,name,branch,year,percentage and college:");
+rollno=br.readLine();
+name=br.readLine();
+branch=br.readLine();
+year=Integer.parseInt(br.readLine());
+per=Float.parseFloat(br.readLine());
+collegename=br.readLine();
+}
+public void display()
+{
+System.out.println("rollnumber="+rollno);
+System.out.println("name="+name);
+System.out.println("Branch="+branch);
+System.out.println("percentage="+per);
+System.out.println("college="+collegename);
+}
+
+public static void main(String args[])throws Exception
+{
+student s1=new student();
+student s2=new student();
+s2.getdata();
+s2.display();
+s1.getdata();
+s1.display();
+}
+}
