@@ -1,0 +1,236 @@
+import java.io.*;
+class parent
+{
+int x;
+public void setx(int p)
+{
+x=p;
+}
+public void getx()
+{
+return x;
+}
+}
+class child extends parent
+{
+int z;
+public void setz(int r)
+{
+z=r;
+}
+public int getz()
+{
+return z;
+}
+}
+public class multilevel
+{
+public static void main(String[] args)
+{
+/*System.out.println("parent -> parent");
+parent1 p=new parent1();
+p.setx(100);
+System.out.println(p.getx());
+System.out.println("child ->child");
+child c=new child();
+s.setx(101);
+System.out.println(c.getx());
+c.sety(201);
+System.out.println(c.gety());*/
+child c=new child();
+c.setx(100);
+c.sety(200);
+c.setz(300);
+System.out.println(c.getx());
+System.out.println(c.gety());
+System.out.println(c.getz());
+}
+}
+-------------------------------------------------------
+class a
+{
+public void show()
+{
+System.out.println("parent show mehod");
+}
+public void display()
+{
+System.out.println("parent display");
+}
+}
+class b extends a
+{
+public void show()
+{
+super.show();
+System.out.println("child show method");
+}
+public void msg()
+{
+System.out.println("child msg method");
+}
+}
+public class methodoverriding{
+public static void main(String[] args)
+{
+b s=new b();
+s.display();
+s.msg();
+s.show();
+}
+}
+--------------------------------------------------------------
+class number
+{
+int x;
+Scanner sc=new Scanner(System.in);
+void show()
+{int x;
+Scanner sc=new Scanner(System.in);
+x=sc.nextInt();
+System.out.println("decimal:"+x);
+}
+}
+class hexa extends number
+{
+void show()
+{
+super.show();
+System.out.println("hexa:"+Integer.toHexaString(x));
+}
+}
+class octal extends number
+{
+void show()
+{
+super.show();
+System.out.println("octa:"+ Integer.toOctalString(x));
+}
+}
+public class convert{
+public static void main(String[] args)
+{
+hexa h=new hexa();
+octal o=new octal();
+h.show();
+o.show();
+}
+}
+---------------------------------------
+class p1
+{
+public p1()
+{
+this("aditya");
+System.out.println("good mrng guest");
+}
+public p1(String name)
+{
+System.out.println("good mrng "+name);
+}
+}
+public class super1
+{
+public static void main(String[] args)
+{
+p1 p=new p1();
+}
+}
+output:
+good mrng aditya
+good mrng guest
+---------------------------------------------
+class gp
+{
+int x;
+public gp(int x)
+{
+this.x=x;
+}
+public void show()
+{
+System.out.println("x="+x);
+}
+}
+class cp extends gp
+{
+int y;
+public cp(int p,int q)
+{
+super(p);
+y=q;
+}
+public void showy()
+{
+System.out.println("y="+y);
+}
+}
+class child extends cp
+{
+int z;
+public z(int p,int q,int r)
+{
+super(p,q);
+z=r;
+}
+public void showz()
+{
+System.out.println("z="+z);
+}
+}
+class basic
+{
+public static void main(String[] args)
+{
+child c=new child(10,20,30);
+c.show();
+c.showy();
+c.showz();
+}
+}
+output:
+x=10
+y=20
+z=30
+-----------------------------------------
+package firstproject;
+class a
+{
+	public void m1()
+	{
+		System.out.println("a method");
+	}
+}
+class b extends a
+{
+	public void m1()
+	{
+		System.out.println("b method");
+	}
+}
+class c extends a
+{
+	public void m1()
+	{
+		System.out.println("c mathod");
+	}
+}
+public class basic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+a d;
+d=new a();
+d.m1();
+d=new b();
+d.m1();
+d=new c();
+d.m1();
+	}
+
+}
+output:
+a method
+b method
+c mathod
+--------------------------------
